@@ -9,7 +9,7 @@ html{
 }
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: #13151F;
+    background-color: #865840;
     width: 100%;
 }
 
@@ -57,7 +57,6 @@ ul ul li{
 ul li:hover ul{
     display: block;
     margin-right: 35px;
-
 }
 ul li:hover .bars{
     display: none;
@@ -67,6 +66,27 @@ ul li:hover {
 }
 
 
+/*https://www.30secondsofcode.org/css/s/hover-underline-animation*/
+a:after{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ccbcac;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+a:hover{
+    color: #ccbcac;
+}
 a{
     color: white;
     text-decoration: none;
@@ -89,14 +109,30 @@ a{
     text-align: right;
 }
 
-.home p{
+/*typewriter animation*/
+#typing{
     color: white;
     font-style: italic;
     font-size: 25px;
-    text-align: right;
-    margin-right: 37px;
+    position: absolute;
+    right: 37px;
+    overflow: hidden;
+    border-right: 3px solid white;
+    white-space: nowrap;
+    animation: typing 3s steps(30,end) 1s 1 normal both, 
+    cursor 0.75s steps(30,end) infinite;
 }
 
+
+@keyframes typing{
+    from{width:0}
+    to{width:290px}
+}
+
+@keyframes cursor{
+    from, to{border-color: transparent}
+    50%{border-color: white;}
+}
 /*Side Navigation*/
 .side-nav{
     position: fixed;
@@ -107,6 +143,7 @@ a{
 
 #side li{
     margin-bottom: 10px;
+    list-style-type: none;
 }
 
 /*About Me Section*/
@@ -114,23 +151,81 @@ a{
     position: relative;
     float: left;
     top: 500px;
-    padding: 60px;
+    margin-left: 60px;
 }
 
 .about-me h1{
     color: white;
     font-size: 96px;
-    padding: 15px;
+    margin-left: 25px;
 }
 
 img{
-    border-radius: 30px;
+    border-radius: 40px;
     float: left;
-    padding: 15px;
+    padding: 25px;
+    transition: all 0.3s;
+}
+
+img:hover{
+    transform: scale(1.04);
 }
 
 .about-me p{
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: lighter;
+    margin-top: 270px;
 }
+
+/*Projects*/
+
+.projects h1{
+    position: relative;
+    top: 600px;
+    float: right;
+    color: white;
+    font-size: 96px;
+    margin-right: 37px;
+    text-align: right;
+}
+
+.button{
+    border: white;
+    color: white;
+    background-color: #b28e71;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 40px;
+    border-radius: 40px;
+    width: 514px;
+    height: 432px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.3s;
+}
+
+.button:hover{
+    transform: scale(1.04);
+}
+
+.button1{
+    position: relative;
+    float: left;
+    top: 750px;
+    margin-left: 100px;
+}
+
+.button2{
+    position: relative;
+    margin-right: 100px;
+    float: right;
+    top: 800px;
+}
+
+.button3{
+    position: relative;
+    float: left;
+    top: 850px;
+    margin-left: 100px;
+}
+
