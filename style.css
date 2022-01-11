@@ -224,7 +224,7 @@ a{
 .button1{
     position: relative;
     float: left;
-    top: 600px;
+    top: 540px;
     margin-left: 70px;
 }
 
@@ -248,9 +248,12 @@ a{
     }
     .projects{
         text-align: center;
+        height: 100%;
+        width: 100%;
     }
     .projects h1{
         margin-left: 0px;
+        
     }
     .button{
         display: block;
