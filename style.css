@@ -14,7 +14,6 @@ body{
 }
 .container{
     position: relative;
-    min-height: 100vh;
 }
 /*Scrollbar*/
 body::-webkit-scrollbar{
@@ -167,12 +166,15 @@ a{
 
 .projects h1{
     position: relative;
-    top: 500px;
-    float: right;
+    float: left;
+    margin-left: 70px;
+    top: 485px;
+    height: 100%;
+    width: 100%;
+
     color: white;
     font-size: 96px;
-    margin-right: 37px;
-    text-align: right;
+    
 }
 
 /*all button size + format*/
@@ -222,21 +224,53 @@ a{
 .button1{
     position: relative;
     float: left;
-    top: 750px;
-    margin-left: 100px;
+    top: 600px;
+    margin-left: 70px;
 }
 
 .button2{
     position: relative;
     margin-right: 100px;
     float: right;
-    top: 800px;
+    top: 650px;
 }
 
 .button3{
     position: relative;
     float: left;
-    top: 850px;
-    margin-left: 100px;
+    top: 700px;
+    margin-left: 70px;
 }
 
+@media only screen and (max-width: 550px){
+    .side-nav{
+        display: none;
+    }
+    .projects{
+        text-align: center;
+    }
+    .projects h1{
+        margin-left: 0px;
+    }
+    .button{
+        display: block;
+        padding: 0px;
+        width: 100%;
+        margin-left: 0px;
+        border-radius: 0px;
+    }
+
+    .button1{
+        top: 510px;
+        
+    }
+
+    .button2{
+        float: left;
+        top: 530px;
+    }
+
+    .button3{
+        top: 550px;
+    }
+}
