@@ -84,6 +84,7 @@ body::-webkit-scrollbar-thumb:active{
 
 #menu-symbol li:hover {
     cursor: pointer;
+
 }
 
 /*animation for top nav*/
@@ -116,6 +117,9 @@ a{
 }
 
 /*Greeting*/
+#section1{
+    height: 100vh;
+}
 .home{
     position: relative;
     float: right;
@@ -219,7 +223,6 @@ a{
 /*Projects*/
 .projects{
     position: relative;
-    top: 485px;
     height: 100%;
     width: 100%;
     float: left;
@@ -265,7 +268,7 @@ a{
     margin-top: 40px;
 }
 
-.iconify2:hover, #technology:hover, #typing:hover, footer:hover{
+.iconify2:hover, #technology:hover, #typing:hover{
     color:#bb86fc;
     transition: all .4s ease;
 }
@@ -301,18 +304,19 @@ footer{
     color: white;
     position: relative;
     text-align: center;
-    top: 630px;
+    top: 100px;
     height: 30px;
     width: 100%;
 }
 
 
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 600px){
     .side-nav{
         display: none;
     }
     .projects{
+        left: 0;
         text-align: center;
         height: 100%;
         width: 100%;
