@@ -40,23 +40,12 @@ body::-webkit-scrollbar-thumb:active{
     width: 100%;
    
 }
+
 #menu-symbol{
     list-style: none;
     margin: 0;
     float: right;
     animation: slide2 0.3s ease-in;
-}
-
-.bars{
-    width: 35px;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0;
-}
-ul ul {
-    display: none;
-    padding: 0;
-    margin: 0;
 }
 
 #menu-symbol li{
@@ -65,21 +54,35 @@ ul ul {
     float: right;
     margin-right: 10px;
     padding: 15px;
-
 }
 
-ul ul li{
+.bars{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+#menu-symbol #top-nav {
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-symbol #top-nav li{
     display: block;
 }
 
-ul li:hover ul{
+#menu-symbol li:hover #top-nav{
     display: block;
     margin-right: 35px;
 }
-ul li:hover .bars{
+
+#menu-symbol li:hover .bars{
     display: none;
 }
-ul li:hover {
+
+#menu-symbol li:hover {
     cursor: pointer;
 }
 
@@ -102,14 +105,15 @@ ul li:hover {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
 .top:hover{
     color: #bb86fc;
 }
+
 a{
     color: white;
     text-decoration: none;
 }
-
 
 /*Greeting*/
 .home{
@@ -156,6 +160,7 @@ a{
 
 /*typewriter animation*/
 #typing{
+    cursor: default;
     color: white;
     font-style: italic;
     font-size: 25px;
@@ -191,19 +196,20 @@ a{
     list-style-type: none;
 }
 
-/*Projects*/
 
-.projects h1{
+/*Projects*/
+.projects{
     position: relative;
-    float: left;
-    margin-left: 70px;
     top: 485px;
     height: 100%;
     width: 100%;
+    float: left;
+}
 
+.projects h1{
+    margin-left: 70px;
     color: white;
     font-size: 96px;
-    
 }
 
 /*all button size + format*/
@@ -214,11 +220,15 @@ a{
     text-decoration: none;
     cursor: pointer;
     padding: 40px;
-    border-radius: 40px;
+    border-radius: 5px;
     width: 514px;
     height: 432px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all 0.3s;
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: 10px;
+
 }
 
 #title{
@@ -235,7 +245,7 @@ a{
     margin-top: 40px;
 }
 
-.iconify2:hover{
+.iconify2:hover, #technology:hover, #typing:hover, footer:hover{
     color:#bb86fc;
     transition: all .4s ease;
 }
@@ -250,26 +260,30 @@ a{
 }
 
 /*positioning of each button*/
-.button1{
+.button1, .button2{
     position: relative;
-    float: left;
-    top: 540px;
-    margin-left: 70px;
+    top: 50px;
 }
 
-.button2{
-    position: relative;
-    margin-right: 100px;
-    float: right;
-    top: 540px;
-}
-
-.button3{
+/*later*/
+/*.button3{
     position: relative;
     float: left;
     top: 650px;
     margin-left: 70px;
 }
+*/
+
+footer{
+    color: white;
+    position: relative;
+    text-align: center;
+    top: 630px;
+    height: 30px;
+    width: 100%;
+}
+
+
 
 @media only screen and (max-width: 550px){
     .side-nav{
@@ -289,24 +303,20 @@ a{
         display: block;
         padding: 0px;
         width: 100%;
-        margin-left: 0px;
-        border-radius: 0px;
+        margin: 0px;
     }
 
-    .home, #menu-symbol{
+    .button1, .button2{
+        margin-top: 30px;
+    }
+
+    #first, #second, #menu-symbol{
         animation: hidden;
     }
-    .button1{
-        top: 510px;
-        
+
+    #typing{
+    animation: typing 2.5s steps(30,end) 1s 1 normal both, 
+    cursor 0.75s steps(30,end) infinite;
     }
 
-    .button2{
-        float: left;
-        top: 530px;
-    }
-
-    .button3{
-        top: 550px;
-    }
 }
