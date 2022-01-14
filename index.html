@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  
   
 </head>
@@ -75,25 +75,31 @@
 
         <section class="section2">
         <div class="projects">
-          <h1>Projects</h1>
+          <h1 data-aos="fade-right" data-aos-easing="linear"
+          data-aos-duration="300">Projects</h1>
 
           <!--PROJECT ONE-->
+          <div data-aos="fade-right"  data-aos-easing="linear"
+          data-aos-duration="300">
           <a href="https://tanjilak.github.io/mauviv/" target="_blank">
               <button class="button button1">
-                    <p id=title>Art Portfolio</p>
+                    <p id=title>Art Portfolio Website</p>
                     <span class="iconify iconify2" data-icon="emojione-monotone:artist-palette" data-width="100" data-height="100"></span>
-                    <p id=description>Created a website to display personal art and designs</p>
+                    <p id =description>Created an art portfolio to display personal art and designs</p>
                     <a href="https://github.com/tanjilak/mauviv" target="_blank"><p id=technology>HTML | CSS | JAVASCRIPT</p></a>
               </button>
           </a>
 
+
           <!--PROJECT TWO-->
+
           <button class="button button2">
                 <p id=title>Water Quality Monitoring System</p>
                 <span class="iconify iconify2" data-icon="healthicons:water-treatment" data-width="100" data-height="100"></span>
                 <p id=description>Built a mobile app to track and display real-time water quality data</p>
                 <p id=technology>FLUTTER | DART</p>
            </button>
+          </div>
 
         <!--HIDE FOR NOW-->
         <!--
@@ -117,7 +123,10 @@
     </div>
 
 <script src="script.js"></script> 
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 
 </body>

@@ -257,11 +257,10 @@ a{
 /*all button size + format*/
 .button{
     border: white;
-    color: white;
+    color: hsl(0, 0%, 80%) ;
     background-color: #1f1b24;
     text-decoration: none;
-    cursor: pointer;
-    padding: 40px;
+  
     border-radius: 5px;
     width: 500px;
     height: 400px;
@@ -269,7 +268,7 @@ a{
     transition: all 0.3s;
     display: inline-block;
     margin-top: 10px;
-    opacity: 70%;    
+    opacity: 90%;    
 
 }
 
