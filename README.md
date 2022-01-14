@@ -1,3 +1,3 @@
 # tanjila
 
-created a personal portfolio to present projects
+created a personal portfolio to present projects and resume
