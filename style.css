@@ -112,6 +112,48 @@ a{
 
 
 /*********SECTION 1*******************/
+
+/*MOON ANIMATION*/
+.wrapper{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    height: 400px;
+    width: 400px;
+    
+}
+
+.moon{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    animation: glow 2s alternate;
+    box-shadow:
+    0 0 60px 30px rgb(255, 255, 255), 
+    0 0 100px 60px rgb(70, 70, 70), 
+    0 0 140px 90px rgb(95, 95, 95); 
+    transition: all 0.9s ease;
+
+}
+
+.moon:hover{
+    box-shadow:
+    0 0 60px 30px rgb(255, 255, 255), 
+    0 0 100px 60px rgb(166, 91, 168), 
+    0 0 140px 90px rgb(53, 55, 148); 
+
+}
+@keyframes glow {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 /*Greeting*/
 #section1{
     height: 100vh;
@@ -119,7 +161,7 @@ a{
 .home{
     position: relative;
     float: right;
-    top: 200px;
+    top: 40%;
     cursor: default;
     width: 100%;
     
@@ -157,12 +199,14 @@ a{
     50%{border-color: white;}
 }
 
+/*tooltip on typing hover*/
 .tooltip2{
     top: 60px;
     left: 82%;
     color: white;
 }
 
+/*general tooltip format*/
 .tooltip{
     visibility: hidden;
     position: relative;
@@ -176,6 +220,7 @@ a{
     opacity: 0;
     transition: opacity 1s;
 }
+
 /******************Side Navigation******************/
 .side-nav{
     position: fixed;
@@ -189,7 +234,7 @@ a{
     list-style-type: none;
 }
 
-/*tooltip*/
+/*tooltip on sidebar*/
 .tooltip1{
     top: -10px;
     left: 40px;
@@ -223,8 +268,7 @@ a{
 /*all button size + format*/
 .button{
     border: white;
-    color: hsl(0, 0%, 80%) ;
-    
+    color: hsl(0, 0%, 80%);
     text-decoration: none;
     border-radius: 5px;
     width: 500px;
@@ -234,7 +278,6 @@ a{
     display: inline-block;
     margin-top: 10px;
     opacity: 90%;    
-    cursor: pointer;
 
 }
 
@@ -256,6 +299,7 @@ a{
     opacity: 0%;
     transition: opacity 0.3s;
 }
+
 .iconify2:hover, #technology:hover, #typing:hover{
     color:#ffdd91;
     transition: all .4s ease;
@@ -281,8 +325,10 @@ a{
 
 .button1{
     background-image: url(images/artportfolio.png);
-    background-size: contain;
+    background-size: cover;
 }
+
+
 /*positioning of each button*/
 .button1, .button2{
     position: relative;
@@ -313,11 +359,12 @@ footer{
 }
 
 
+
+
+
 /***********MOBILE LAYOUT*********/
 @media only screen and (max-width: 600px){
-    .side-nav{
-        display: none;
-    }
+
     .projects{
         left: 0;
         text-align: center;
@@ -340,13 +387,7 @@ footer{
         margin-top: 30px;
     }
 
-    #first, #second, #menu-symbol{
-        animation: hidden;
-    }
-
-   
-
-    .tooltip2{
+    .tooltip2, .wrapper, .side-nav{
         display:none;
     }
 
