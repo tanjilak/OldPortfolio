@@ -117,16 +117,17 @@ a{
 .wrapper{
     position: absolute;
     top: 30%;
-    left: 30%;
+    left: 25%;
     height: 400px;
     width: 400px;
+    z-index: 999;
     
 }
 
 .moon{
     text-align: center;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background: white;
     animation: glow 2s alternate;
@@ -135,6 +136,8 @@ a{
     0 0 100px 60px rgb(70, 70, 70), 
     0 0 140px 90px rgb(95, 95, 95); 
     transition: all 0.9s ease;
+    cursor:crosshair;
+ 
 
 }
 
