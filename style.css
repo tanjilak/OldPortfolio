@@ -270,7 +270,7 @@ a{
 
 /*all button size + format*/
 .button{
-    border: white;
+    
     color: hsl(0, 0%, 80%);
     text-decoration: none;
     border-radius: 5px;
@@ -280,7 +280,8 @@ a{
     transition: all 0.3s;
     display: inline-block;
     margin-top: 15px;
-    opacity: 90%;    
+    opacity: 90%;   
+    border: 10px solid white; 
 
 }
 
